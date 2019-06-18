@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jowisz.jowisz.controllers.StartController">
+   <top>
+      <Label text="JOWISZ" textAlignment="CENTER" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial" size="67.0" />
+         </font>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </Label>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="stock" mnemonicParsing="false" onAction="#goToStock" prefHeight="50.0" prefWidth="300.0" text="Sprzęt">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></Button>
+            <Button fx:id="orders" mnemonicParsing="false" onAction="#goToOrders" prefHeight="50.0" prefWidth="300.0" text="Zamówienia">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></Button>
+            <Button fx:id="producers" mnemonicParsing="false" onAction="#goToProducers" prefHeight="50.0" prefWidth="300.0" text="Producenci">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor></Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </VBox>
+   </center>
+</BorderPane>

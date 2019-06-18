@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jowisz.jowisz.controllers.DeviceFormController">
+   <center>
+      <GridPane alignment="CENTER" prefHeight="100.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" maxWidth="100.0" minWidth="100.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="200.0" minWidth="200.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="150.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nazwa:" />
+            <Label text="Opis:" GridPane.rowIndex="1" />
+            <Label text="Cena:" GridPane.rowIndex="2" />
+            <Label text="Zdjęcie:" GridPane.rowIndex="3" />
+            <TextField fx:id="name" GridPane.columnIndex="1" />
+            <TextArea fx:id="description" prefHeight="400.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Liczba sztuk:" GridPane.rowIndex="4" />
+            <TextField fx:id="number" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="chooseButton" mnemonicParsing="false" onAction="#chooseFile" text="Choose image..." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Producent:" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboProd" prefHeight="31.0" prefWidth="209.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Typ:" GridPane.rowIndex="6" />
+            <ComboBox fx:id="comboTyp" prefHeight="31.0" prefWidth="201.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label fx:id="label" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+   </top>
+   <bottom>
+      <GridPane maxWidth="400.0" prefHeight="100.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancel" text="Anuluj" />
+            <Button fx:id="add" mnemonicParsing="false" onAction="#save" text="Zapisz" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
